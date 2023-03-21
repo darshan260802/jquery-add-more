@@ -49,16 +49,6 @@ function getData(index) {
 }
 
 function updateTable() {
-  const model = `<table>
-    <tr>
-        <th colspan="2">Title 1</th>
-    </tr>
-    <tr>
-        <td>1</td>
-        <td>2</td>
-    </tr>
-</table>`;
-
   let $target = $("#table-parent");
   // Removes Existing tables
   $target.children().first().nextAll().remove();
