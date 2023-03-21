@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="script.js"></script>
+    <title>Add More</title>
+</head>
+<body>
+    <div class="container-main">
+        <div class="container-left">
+            <button class="btn btn-success text-bold" onclick="addMore(this)" >Add More</button>
+
+            <div class="container-input" data-index="0" >
+                <div class="container-title-input">
+                    <input type="text" name="title"  placeholder="Title">
+                    <button class="btn btn-nuetral text-bold" onclick="addChild(this)" >Add Child</button>
+                    <button class="btn btn-success text-bold" onclick="submit(this)" >Submit</button>
+                </div>
+                <div class="container-children-input">
+                    <div class="container-child-input">
+                        <input type="text" name="subtitle"  placeholder="Subtitle">
+                        <input type="text" name="value"  placeholder="Value" >
+                        <button class="btn btn-danger text-bold" onclick="deleteChild(this)" >Delete</button>
+                    </div>
+                    <div class="container-child-input">
+                        <input type="text" name="subtitle"  placeholder="Subtitle">
+                        <input type="text" name="value"  placeholder="Value" >
+                        <button class="btn btn-danger text-bold" onclick="deleteChild(this)" >Delete</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="container-right" id="table-parent">
+            <h1>SPECIFICATION</h1>
+            <table data-index="0" ></table>
+            
+        </div>
+    </div>
+
+    <div class="templates">
+        <!-- Main Input Template -->
+        <section id="main-input-template">
+            <div class="container-input"  >
+                <div class="container-title-input">
+                    <input type="text" name="title"  placeholder="Title">
+                    <button class="btn btn-nuetral text-bold" onclick="addChild(this)" >Add Child</button>
+                    <button class="btn btn-success text-bold" onclick="submit(this)" >Submit</button>
+                </div>
+                <div class="container-children-input">
+                    
+                </div>
+            </div>
+        </section>
+        <!-- Main Input Template -->
+
+        <!-- Child input template -->
+        <section id="child-input-template">
+            <div class="container-child-input" >
+                <input type="text" name="subtitle"  placeholder="Subtitle">
+                <input type="text" name="value"  placeholder="Value" >
+                <button class="btn btn-danger text-bold" onclick="deleteChild(this)" >Delete</button>
+            </div>
+        </section>
+        <!-- Child input template -->
+    </div>
+
+</body>
+</html>
